@@ -20,7 +20,7 @@ Real xr1,xr2,xr3,xr4;
 Real a0=0,a1,a2,a3;
 Real v0,v1,v2,v3, vsq;
 Real h0,h1,h2,h3;
-Real r,r2,rho,z;
+Real r,r2,rho,z,norm;
 Real al,d, xl,xd;
 int  k,kp, cr, nacd, test;
 Real pi2, b3;
@@ -75,7 +75,8 @@ b3=1/(Real)3.;
 			vsq = v0*v0 + v1*v1 + v2*v2 + v3*v3;
 			z = sqrt((double)vsq );
       /* Normalize   u */
-			v0 = v0/z; v1 = v1/z; v2 = v2/z; v3 = v3/z;
+      norm = 1.0 / z;
+			v0 = v0*norm; v1 = v1*norm; v2 = v2*norm; v3 = v3*norm;
 
 	/* end norm check--trial SU(2) matrix is a0 + i a(j)sigma(j)*/
 

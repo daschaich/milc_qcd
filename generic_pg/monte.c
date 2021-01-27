@@ -73,9 +73,9 @@ b3=1/(Real)3.;
 			v2 =  action.e[ina][inb].real - action.e[inb][ina].real;
 
 			vsq = v0*v0 + v1*v1 + v2*v2 + v3*v3;
-			z = 1.0 / sqrt((double)vsq );
+			z = sqrt((double)vsq );
       /* Normalize   u */
-			v0 = v0*z; v1 = v1*z; v2 = v2*z; v3 = v3*z;
+			v0 = v0/z; v1 = v1/z; v2 = v2/z; v3 = v3/z;
 
 	/* end norm check--trial SU(2) matrix is a0 + i a(j)sigma(j)*/
 

@@ -1,21 +1,23 @@
 Pure gauge SU3
-MIMD version 6
+MIMD version 7
 Machine = Scalar processor, with 1 nodes
 Overrelaxed/quasi-heat bath algorithm
-start: Fri Mar 31 10:58:53 2000
+start: Wed Jan 27 00:47:37 2021
 
-type 0 for no prompts  or 1 for prompts
+type 0 for no prompts, 1 for prompts, or 2 for proofreading
 nx 4
 ny 4
 nz 4
 nt 8
 iseed 8352
-LAYOUT = Hypercubes, options = EVENFIRST,
-Mallocing 0.3 MBytes per node for lattice
+LAYOUT = Hypercubes, options = with fixed input-parameter node_geometry
+ON EACH NODE (RANK) 4 x 4 x 4 x 8
+Mallocing 0.7 MBytes per node for lattice
+WARNING!!: Resetting random seed
 
 
 warms 0
-trajecs 2
+trajecs 20
 traj_between_meas 1
 beta 6
 steps_per_trajectory 4
@@ -24,16 +26,35 @@ fresh
 NOT fixing the gauge
 forget 
 unit gauge configuration loaded
-CHECK PLAQ: 3.000000e+00 3.000000e+00
-Unitarity checked.  Max deviation 0.00e+00
-Time to check unitarity = 1.000000e-02
+CHECK PLAQ: 3.0000000000000000e+00 3.0000000000000000e+00
+CHECK NERSC LINKTR: 1.0000000000000000e+00 CKSUM: 0
+Reunitarized for double precision. Max deviation 0.00e+00 changed to 0.00e+00
+Time to check unitarity = 6.031990e-04
 WARMUPS COMPLETED
 GMES 4.158010e-01 2.999533e-02 9.990000e+01 1.847285e+00 1.843035e+00
 GMES 9.263432e-02 6.448229e-02 9.990000e+01 1.801443e+00 1.790933e+00
+GMES 8.250231e-02 -1.798536e-02 9.990000e+01 1.817186e+00 1.756059e+00
+GMES -7.176028e-02 -2.335646e-02 9.990000e+01 1.808638e+00 1.782163e+00
+GMES -1.170332e-02 -3.897382e-03 9.990000e+01 1.754713e+00 1.754556e+00
+GMES -5.888833e-03 3.288680e-02 9.990000e+01 1.747912e+00 1.750669e+00
+GMES -2.058321e-01 -2.358589e-02 9.990000e+01 1.796127e+00 1.795784e+00
+GMES -6.920688e-02 -2.721622e-01 9.990000e+01 1.803366e+00 1.756559e+00
+GMES -1.641507e-01 -3.174458e-01 9.990000e+01 1.793884e+00 1.800983e+00
+GMES -9.697415e-02 -3.414392e-01 9.990000e+01 1.776305e+00 1.799273e+00
+GMES -1.223363e-01 2.745737e-02 9.990000e+01 1.766613e+00 1.760419e+00
+GMES 1.502628e-01 -1.674554e-01 9.990000e+01 1.779933e+00 1.791961e+00
+GMES 7.627133e-02 1.317500e-02 9.990000e+01 1.783364e+00 1.770603e+00
+GMES -6.085519e-03 -1.505894e-02 9.990000e+01 1.814306e+00 1.798592e+00
+GMES -1.861312e-01 1.209259e-01 9.990000e+01 1.790068e+00 1.795864e+00
+GMES 1.417052e-01 -2.432710e-01 9.990000e+01 1.784799e+00 1.783460e+00
+GMES 1.627318e-01 1.828795e-03 9.990000e+01 1.798878e+00 1.794918e+00
+GMES -8.348592e-02 7.839890e-02 9.990000e+01 1.767925e+00 1.765390e+00
+GMES -8.020375e-02 -1.057290e-01 9.990000e+01 1.781387e+00 1.776210e+00
+GMES 4.411203e-02 3.610873e-02 9.990000e+01 1.792973e+00 1.804403e+00
 RUNNING COMPLETED
-Time = 8.100605e-02 seconds
+Time = 8.001699e-01 seconds
 
 
 get_i(0): EOF on input.
-exit: Fri Apr 19 22:29:30 2019
+exit: Wed Jan 27 00:47:37 2021
 
